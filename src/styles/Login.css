@@ -1,0 +1,131 @@
+/* Login.css */
+
+/* Reset for this page */
+.login-container,
+.login-container * {
+  box-sizing: border-box;
+}
+
+/* Fullscreen background */
+.login-container {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom right, #00264d, #004080, #0059b3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+/* Logo */
+.logo-container {
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+/* Titles */
+.brand-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  text-align: center;
+}
+
+.brand-subtitle {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  opacity: 0.85;
+  text-align: center;
+}
+
+/* Form Box */
+.login-form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Inputs */
+.login-form input,
+.login-form select {
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: white;
+  color: #333;
+  outline: none;
+}
+
+.login-form input::placeholder {
+  color: #888;
+}
+
+/* Role dropdown */
+.role-select {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.role-select label {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #f0f0f0;
+}
+
+/* Button */
+.login-button {
+  padding: 12px;
+  background-color: #00aaff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.login-page {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+body.login-body {
+  padding-top: 0 !important;
+}
+.login-button:hover {
+  background-color: #0088cc;
+}
+
+/* Optional animation */
+.animate-fade {
+  animation: fadeIn 0.5s ease-in-out both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

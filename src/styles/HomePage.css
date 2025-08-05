@@ -1,0 +1,117 @@
+.home-container {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-hero {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15); /* lighter overlay */
+  backdrop-filter: none; /* remove blur completely */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.welcome-card {
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent but clearer */
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeInUp 1s ease-out;
+}
+
+.welcome-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(255, 255, 255, 0.15);
+}
+
+.welcome-card h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 0.6rem;
+}
+
+.flat-info {
+  font-size: 1.2rem;
+  color: #fbff00;
+  margin-bottom: 1.5rem;
+}
+
+.overview-box {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin-top: 1rem;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.overview-box h2 {
+  margin-bottom: 0.7rem;
+  color: #ffd700;
+}
+
+.overview-box ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.overview-box li {
+  margin: 0.6rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.overview-box li::before {
+  content: "✨";
+  position: absolute;
+  left: 0;
+}
+
+.know-more-button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  background-color: #00c2ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.know-more-button:hover {
+  background-color: #009adf;
+  transform: scale(1.05);
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

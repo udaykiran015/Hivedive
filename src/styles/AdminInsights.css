@@ -1,0 +1,174 @@
+/* Admin Insights Container */
+.admin-insights-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #e6f0fa, #ffffff);
+  min-height: 100vh;
+  padding: 120px 40px 40px; /* Top padding for fixed navbar */
+  color: #1a1a1a;
+  padding-top: 30px;
+}
+
+/* Page Title */
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+/* Description */
+.description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Search Input Field */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 10px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px; /* Added gap below search bar */
+}
+
+/* Card Grid Layout */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px; /* Increased card gap */
+  justify-items: center;
+  align-items: start;
+}
+
+/* Community Card */
+.community-card {
+  width: 100%;
+  max-width: 280px;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 123, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.community-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+/* Severity-based colors */
+.community-card.high {
+  border: 2px solid rgba(255, 0, 0, 0.4);
+  background: rgba(255, 230, 230, 0.6);
+}
+
+.community-card.high:hover {
+  background: rgba(255, 230, 230, 0.8);
+  box-shadow: 0 10px 28px rgba(255, 0, 0, 0.25);
+}
+
+.community-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  color: #005599;
+}
+
+.community-card p {
+  font-size: 0.9rem;
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+/* Overview Drawer */
+.details-drawer {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 340px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+  padding: 24px;
+  z-index: 999;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  animation: slideIn 0.3s ease-out;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.details-drawer h3 {
+  font-size: 1.25rem;
+  margin-bottom: 18px;
+  color: #003366;
+}
+
+.details-drawer p {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+/* Close Button */
+.close-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 10px;
+  transition: background 0.2s ease;
+}
+
+.close-btn:hover {
+  background: #cc0000;
+}
+
+/* Navbar Fixed (ensure your AdminNavbar uses this too) */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-insights-container {
+    padding: 100px 20px 30px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .details-drawer {
+    width: 100%;
+    right: 0;
+    border-radius: 0;
+    top: 70px;
+  }
+}

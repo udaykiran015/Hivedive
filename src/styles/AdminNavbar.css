@@ -1,0 +1,92 @@
+/* src/styles/AdminNavbar.css */
+
+.admin-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #00264d, #004d7a);
+  padding: 14px 24px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 60px; /* important: defines how much space to offset below */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.admin-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.admin-role-tag {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-left: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.admin-nav-links {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.admin-nav-links li a:hover,
+.admin-nav-links li .active-link {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.admin-logout-btn {
+  background-color: #e60000;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-logout-btn:hover {
+  background-color: #b30000;
+}
+
+/* Responsive: Stack nav links vertically on narrow screens */
+@media (max-width: 768px) {
+  .admin-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding-bottom: 12px;
+  }
+
+  .admin-nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .admin-logout-btn {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+}
